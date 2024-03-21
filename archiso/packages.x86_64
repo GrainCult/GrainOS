@@ -1,7 +1,7 @@
 alacritty
 alsa-utils
 amd-ucode
-arch-install-scripts
+#arch-install-scripts
 #archinstall
 b43-fwcutter
 base
