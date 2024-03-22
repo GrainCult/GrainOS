@@ -13,17 +13,16 @@ jobs:
     - name: ✅ Checkout
       uses: actions/checkout@v2
 
-    #- name: 🛠️ Prepare environment
-      #uses: RangHo/setup-arch@v1.1.0
-      #with:
-        #mirror: https://geo.mirror.pkgbuild.com
-        #packages: "arch-install-scripts archiso awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils"
+    - name: 🛠️ Prepare environment
+      uses: RangHo/setup-arch@v1.1.0
+      with:
+        mirror: https://geo.mirror.pkgbuild.com
+        packages: "arch-install-scripts archiso awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils"
 
     - name: 💿 Build archiso
       run: | 
-        mkdir out
-        echo $RANDOM > out/test.iso
-      #shell: arch.sh {0}
+        sudo mkarchiso -v archiso
+      shell: arch.sh {0}
       
     - name: 🎉 Upload release
       uses: "marvinpinto/action-automatic-releases@latest"
