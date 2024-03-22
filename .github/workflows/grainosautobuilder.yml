@@ -17,7 +17,7 @@ jobs:
       uses: RangHo/setup-arch@v1.1.0
       with:
         mirror: https://geo.mirror.pkgbuild.com
-        packages: "arch-install-scripts awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils"
+        packages: "arch-install-scripts archiso awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils"
 
 
     - name: Build Archiso
