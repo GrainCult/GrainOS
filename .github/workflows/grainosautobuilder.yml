@@ -10,17 +10,24 @@ jobs:
     runs-on: ubuntu-latest # ubuntu is powering the github action lol L
 
     steps:
-    - name: checkout repo
+    - name: ✅ Checkout
       uses: actions/checkout@v2
 
-    - name: Setup Arch Linux environment
-      uses: RangHo/setup-arch@v1.1.0
-      with:
-        mirror: https://geo.mirror.pkgbuild.com
-        packages: "arch-install-scripts archiso awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils"
+    #- name: 🛠️ Prepare environment
+      #uses: RangHo/setup-arch@v1.1.0
+      #with:
+        #mirror: https://geo.mirror.pkgbuild.com
+        #packages: "arch-install-scripts archiso awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils"
 
-
-    - name: Build Archiso
+    - name: 💿 Build archiso
       run: | 
-        sudo mkarchiso -v archiso
+        touch out/test.iso
       shell: arch.sh {0}
+      
+    - name: 🎉 Upload release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        files: |
+          out/*.iso
