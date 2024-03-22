@@ -135,6 +135,7 @@ usb_modeswitch
 usbmuxd
 usbutils
 vlc
+vi
 vim
 virtualbox-guest-utils-nox
 vpnc
