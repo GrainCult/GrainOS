@@ -14,11 +14,13 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup Arch Linux environment
-      uses: ryanhartje/setup-arch
+      uses: RangHo/setup-arch@v1.1.0
       with:
         mirror: https://geo.mirror.pkgbuild.com
         packages: "arch-install-scripts awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils"
 
 
     - name: Build Archiso
-      run: mkarchiso -v -w work -o out
+      run: | 
+        mkarchiso -v -w work -o out
+      shell: arch.sh {0}
