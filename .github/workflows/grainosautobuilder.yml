@@ -22,7 +22,7 @@ jobs:
     - name: 💿 Build archiso
       run: | 
         mkdir out
-        touch out/test.iso
+        echo $RANDOM > out/test.iso
       #shell: arch.sh {0}
       
     - name: 🎉 Upload release
