@@ -13,12 +13,12 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v2
 
-    - name: make arch enviroment
-      uses: monty5811/setup-archlinux@v2
+    -name: Setup Arch Linux environment
+    -uses: ryanhartje/setup-arch
       with:
-        mirror: http://mirror.archlinux.org/$repo/os/$arch
-        pacman-package-list: arch-install-scripts awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils
+        mirror: https://geo.mirror.pkgbuild.com
+        packages: "arch-install-scripts awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils"
 
 
     - name: Build Archiso
-      run: mkarchiso -v -w work -o out <path-to-your-archiso-configuration-directory>
+      run: mkarchiso -v -w work -o out
