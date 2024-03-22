@@ -22,5 +22,5 @@ jobs:
 
     - name: Build Archiso
       run: | 
-        mkarchiso -v archiso
+        sudo mkarchiso -v archiso
       shell: arch.sh {0}
