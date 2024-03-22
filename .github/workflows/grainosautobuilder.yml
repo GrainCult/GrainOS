@@ -1,0 +1,24 @@
+name: grainos auto build
+
+on:
+  push:
+    branches:
+      - main  # main main main main main main main main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # ubuntu is powering the github action lol L
+
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v2
+
+    - name: make arch enviroment
+      uses: monty5811/setup-archlinux@v2
+      with:
+        mirror: http://mirror.archlinux.org/$repo/os/$arch
+        pacman-package-list: arch-install-scripts awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils
+
+
+    - name: Build Archiso
+      run: mkarchiso -v -w work -o out <path-to-your-archiso-configuration-directory>
