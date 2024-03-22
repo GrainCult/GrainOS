@@ -22,7 +22,7 @@ jobs:
     - name: 💿 Build archiso
       run: | 
         touch out/test.iso
-      shell: arch.sh {0}
+      #shell: arch.sh {0}
       
     - name: 🎉 Upload release
       uses: "marvinpinto/action-automatic-releases@latest"
