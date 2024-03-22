@@ -13,8 +13,8 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v2
 
-    -name: Setup Arch Linux environment
-    -uses: ryanhartje/setup-arch
+    - name: Setup Arch Linux environment
+      uses: ryanhartje/setup-arch
       with:
         mirror: https://geo.mirror.pkgbuild.com
         packages: "arch-install-scripts awk dosfstools e2fsprogs erofs-utils findutils grub gzip libarchive libisoburn mtools openssl pacman sed squashfs-tools shellcheck python-docutils"
