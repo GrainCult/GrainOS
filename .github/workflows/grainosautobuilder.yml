@@ -21,6 +21,7 @@ jobs:
 
     - name: 💿 Build archiso
       run: | 
+        mkdir out
         touch out/test.iso
       #shell: arch.sh {0}
       
