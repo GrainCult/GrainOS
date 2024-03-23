@@ -1,0 +1,10 @@
+NAME="GrainOS"
+PRETTY_NAME="GrainOS"
+ID=grainos
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://graincult.com/"
+DOCUMENTATION_URL="https://github.com/GrainCult/GrainOS/"
+SUPPORT_URL="https://github.com/GrainCult/GrainOS/"
+BUG_REPORT_URL="https://github.com/GrainCult/GrainOS/issues/"
+LOGO=archlinux-logo
