@@ -4,7 +4,7 @@ GrainOS is an Arch Linux-based distribution. This distro is all about harvesting
 
 This distribution is still W.I.P. Alot of stuff still needs to be done.
 
-
+```bash
                     ****                      
                 *****  #############          
             ******  ##################        
@@ -28,4 +28,4 @@ This distribution is still W.I.P. Alot of stuff still needs to be done.
           **    -- ---  --- ---  --   ++++    
               --   --  ---  --         +++    
                   --   --               +     
-                                          
+```                                          
