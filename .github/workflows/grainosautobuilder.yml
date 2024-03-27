@@ -5,6 +5,8 @@ on:
     branches:
       - main  # main main main main main main main main
 
+permissions: write-all
+
 jobs:
   build:
     runs-on: ubuntu-latest # ubuntu is powering the github action lol L
